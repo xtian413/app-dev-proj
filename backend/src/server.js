@@ -8,7 +8,7 @@ import studentsRouter from './routes/studentsRoute.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());    
 app.use(express.json());
@@ -20,6 +20,5 @@ initDB().then(() => {
     app.listen(PORT, () => {
         console.log(`🚀 Server is listening on http://localhost:${PORT}`);
     });
-}).catch(error => {
-    console.error("❌ Failed to start server:", error);
-});
+})
+
